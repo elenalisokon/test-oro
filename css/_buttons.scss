@@ -1,0 +1,27 @@
+button,
+input[type="submit"] {
+  font: 500 16px/1.2 "Space Grotesk", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  border: 0;
+  background: $black;
+  color: $white;
+  padding: 12px 85px;
+  cursor: pointer;
+  transition: all 0.7s ease;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    width: 100%;
+    padding: 14px 40px 15px;
+  }
+}

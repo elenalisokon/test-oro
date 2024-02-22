@@ -1,0 +1,38 @@
+input {
+  font: 500 20px/1.3 "Space Grotesk", sans-serif;
+  display: block;
+  background: none;
+  color: $black;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid $black;
+  width: 100%;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.response {
+  font-size: 12px;
+  line-height: 16px;
+  min-height: 16px;
+  color: $red;
+  margin-bottom: 28px;
+
+  &.success {
+    color: $yellow;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  input {
+    margin-bottom: 28px;
+  }
+}

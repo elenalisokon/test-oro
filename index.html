@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/main.js"></script>
+  <title>Oro Partner Portal</title>
+</head>
+<body>
+  <header class="header js-mobile-menu-container">
+    <div class="row">
+      <span class="lg-hidden header-mobile-menu-opener js-mobile-menu-opener">Open menu</span>
+      <div class="header-logo"><strong><img src="img/logo.svg" alt="Oro Partner Portal"></strong></div>
+      <div class="header-menu">
+        <div class="header-menu-inner">
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item"><a class="header-nav-link active" href="">Marketing Materials</a></li>
+              <li class="header-nav-item"><a class="header-nav-link" href="">About</a></li>
+              <li class="header-nav-item"><a class="header-nav-link" href="">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="header-profile">
+            <div class="header-profile-toggle js-toggle-container">
+              <span class="header-profile-toggle-opener js-toggle-opener">Serhii</span>
+              <div class="dropdown-menu">
+                <ul class="header-profile-toggle-list">
+                  <li class="header-profile-toggle-item"><a class="header-profile-toggle-link"  href="">My Profile</a></li>
+                  <li class="header-profile-toggle-item"><a class="header-profile-toggle-link" href="">Address Book</a></li>
+                  <li class="header-profile-toggle-item"><a class="header-profile-toggle-link" href="">Users</a></li>
+                  <li class="header-profile-toggle-item"><a class="header-profile-toggle-link" href="">Requests For Quote</a></li>
+                  <li class="header-profile-toggle-item"><a class="header-profile-toggle-link" href="">Order History</a></li>
+                </ul>
+              </div>
+            </div>
+            <a href="" class="link-sign-out">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="section-intro">
+    <div class="row">
+      <div class="section-intro-welcome">
+        <h1>Welcome to Oro Commerce Partner Portal</h1>
+        <form class="form-login" action="#">
+          <label for="email">Email Address</label>
+          <input id="email" type="email" required>
+          <div id="emailError" class="response"></div>
+
+          <label for="password">Password</label>
+          <input id="password" type="password" required minlength="8">
+          <div id="passwordError" class="response"></div>
+
+          <div class="button-row">
+            <button id="button-login" class="btn" type="button" onclick="validateForm()">Login</button>
+            <a href="" class="link-forgot-password">forgot password?</a>
+          </div>
+
+          <div id="validResponse" class="response success"></div>
+        </form>
+      </div>
+      <div class="section-intro-visual md-hidden">
+        <img aria-hidden="true" class="section-intro-visual" src="img/image-intro.png" alt="Arrow up">
+      </div>
+    </div>
+  </section>
+  <section class="section-partner">
+    <div class="row">
+      <div class="section-partner-visual md-hidden">
+        <img aria-hidden="true" src="img/image-partner.png" alt="Decoration square">
+      </div>
+      <div class="text-block">
+        <h2>Not a partner yet?</h2>
+        <p>Join Oro’s growing ecosystem of B2B technology experts</p>
+        <button class="btn">become a partner</button>
+      </div>
+    </div>
+  </section>
+  <section class="section-team">
+    <div class="row">
+      <div class="section-team-text">
+        <p>With over 50 years of combined eCommerce experience, the team that built the most widely-used eCommerce platform is now doing it again. Oro’s founding team consists of Co-Founders and Former Leaders of Magento.</p>
+      </div>
+      <ul class="section-team-list">
+        <li class="section-team-item">
+          <a class="sm-hidden" href=""><img src="img/YoavKutner.jpg" alt="Yoav Kutner"></a>
+          <h3>Yoav Kutner</h3>
+          <p>Founder & Chief Executive Officer</p>
+          <a class="link-bio" href="">View Bio</a>
+        </li>
+        <li class="section-team-item">
+          <a class="sm-hidden" href=""><img src="img/DimaSoroka.jpg" alt="Dima Soroka"></a>
+          <h3>Dima Soroka</h3>
+          <p>Founder & Chief Executive Officer</p>
+          <a class="link-bio" href="">View Bio</a>
+        </li>
+        <li class="section-team-item">
+          <a class="sm-hidden" href=""><img src="img/MichaelBessolov.jpg" alt="Michael Bessolov"></a>
+          <h3>Michael Bessolov</h3>
+          <p>Vice President of Engineering</p>
+          <a class="link-bio" href="">View Bio</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="row">
+      <h4>Follow Oro</h4>
+      <ul class="follow-list">
+        <li class="follow-item"><a class="follow-icon" href="">Facebook</a></li>
+        <li class="follow-item"><a class="follow-icon linkedin" href="">LinkedIn</a></li>
+        <li class="follow-item"><a class="follow-icon twitter" href="">Twitter</a></li>
+      </ul>
+      <div class="footer-bottom-row">
+        <ul class="footer-nav">
+          <li class="footer-nav-item"><a class="footer-nav-link" href="">Terms & Conditions</a></li>
+          <li class="footer-nav-item"><a class="footer-nav-link" href="">Privacy Policy</a></li>
+          <li class="footer-nav-item"><a class="footer-nav-link" href="">Privacy Shield Certification</a></li>
+        </ul>
+        <span class="copyright">© 2024 Oro, Inc. All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

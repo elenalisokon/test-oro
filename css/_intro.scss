@@ -1,0 +1,83 @@
+.section-intro {
+  padding: 118px 0 91px;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 52px;
+  }
+
+  &-welcome {
+    margin-right: 8.5%;
+    width: 50%;
+  }
+
+  .form-login {
+    padding-top: 36px;
+
+    .button-row {
+      padding: 4px 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  .link-forgot-password {
+    display: inline-block;
+    padding-right: 31px;
+    text-transform: uppercase;
+    font: 500 16px/1.2 "Space Grotesk", sans-serif;
+    background: url(../img/icons/arrow-forgot.svg) 100% 3px no-repeat;
+
+    &:hover {
+      transition: all 0.3s ease;
+      color: $yellow;
+    }
+  }
+
+  &-visual {
+    flex-grow: 1;
+    margin-top: 33px;
+
+    img {
+      max-width: 426px;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .section-intro {
+    .row {
+      display: block;
+    }
+    &-welcome {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-intro {
+    padding: 40px 0 25px;
+    
+    .row {
+      padding-left: 30px;
+    }
+
+    .form-login {
+      padding-top: 0;
+
+      .button-row {
+        display: block;
+
+        .btn {
+          margin-bottom: 27px;
+        }
+      }
+    }
+  }
+}

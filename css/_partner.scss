@@ -1,0 +1,43 @@
+.section-partner {
+  background: $yellow;
+  font-size: 16px;
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    margin-bottom: 31px;
+  }
+
+  &-visual {
+    max-width: 459px;
+    margin: 0 4.37% 0 41px;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .section-partner {
+    padding: 139px 0;
+
+    .row {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .section-partner {
+    padding: 34px 0 57px;
+
+    .btn {
+      margin-top: 15px;
+    }
+  }
+}
