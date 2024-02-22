@@ -53,6 +53,7 @@ function addToggleListeners(openerSelector, containerSelector, activeClass) {
     const container = document.querySelector(containerSelector);
 
     opener.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
         toggleContainerState(container, activeClass);
     });
