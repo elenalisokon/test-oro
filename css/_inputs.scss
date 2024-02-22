@@ -3,7 +3,7 @@ input {
   display: block;
   background: none;
   color: $black;
-  padding: 7px 0;
+  padding: 7px 0 6px;
   border: 0;
   border-bottom: 1px solid $black;
   width: 100%;
@@ -21,7 +21,7 @@ label {
   line-height: 16px;
   min-height: 16px;
   color: $red;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 
   &.success {
     color: $yellow;

@@ -1,6 +1,21 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(../fonts/SpaceGrotesk-VariableFont_wght.woff2) format("woff2");
+  font-weight: 500;
+}
 body {
   background: #F7F9F9;
-  font: 18px/1.6 "Roboto", Arial, Helevtica, sans-serif;
+  font: 18px/29px "Roboto", Arial, Helevtica, sans-serif;
   color: #535356;
   margin: 0;
 }
@@ -82,7 +97,7 @@ input {
   display: block;
   background: none;
   color: #352E31;
-  padding: 7px 0;
+  padding: 7px 0 6px;
   border: 0;
   border-bottom: 1px solid #352E31;
   width: 100%;
@@ -100,7 +115,7 @@ label {
   line-height: 16px;
   min-height: 16px;
   color: #B33F27;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 }
 .response.success {
   color: #F7BB33;
@@ -217,7 +232,6 @@ input[type=submit] {
 }
 .header-profile {
   font-size: 14px;
-  padding-top: 1px;
 }
 .header-profile-toggle {
   display: inline-block;
@@ -230,6 +244,7 @@ input[type=submit] {
   vertical-align: top;
   position: relative;
   padding: 0 18px;
+  margin-top: 4px;
   cursor: pointer;
   background: url(../img/icons/ico-profile.svg) 0 46% no-repeat;
 }
@@ -258,7 +273,7 @@ input[type=submit] {
   max-height: 500px;
 }
 .header-profile-toggle-list {
-  margin: 20px 0 0;
+  margin: 17px 0 0;
   padding: 27px 16px 26px;
   list-style: none;
   background: #FFF;
@@ -415,12 +430,14 @@ input[type=submit] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section-intro .link-forgot-password {
   display: inline-block;
+  vertical-align: top;
+  margin-top: -2px;
   padding-right: 31px;
   text-transform: uppercase;
   font: 500 16px/1.2 "Space Grotesk", sans-serif;
@@ -655,6 +672,7 @@ input[type=submit] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  color: #9DA4A7;
 }
 .footer-nav {
   margin: 0;
@@ -679,6 +697,7 @@ input[type=submit] {
 .footer .copyright {
   min-width: 25.5%;
   font-size: 12px;
+  line-height: 18px;
 }
 
 @media screen and (max-width: 1023px) {

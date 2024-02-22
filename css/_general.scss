@@ -1,6 +1,27 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.woff2) format("woff2");
+
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Bold.woff2) format("woff2");
+
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url(../fonts/SpaceGrotesk-VariableFont_wght.woff2) format("woff2");
+
+  font-weight: 500;
+}
+
 body {
   background: $lightest-gray;
-  font: 18px/1.6 "Roboto", Arial, Helevtica, sans-serif;
+  font: 18px/29px "Roboto", Arial, Helevtica, sans-serif;
   color: $darkest-gray;
   margin: 0;
 }

@@ -67,7 +67,6 @@
 
   &-profile {
     font-size: 14px;
-    padding-top: 1px;
   }
 
   &-profile-toggle {
@@ -81,6 +80,7 @@
       vertical-align: top;
       position: relative;
       padding: 0 18px;
+      margin-top: 4px;
       cursor: pointer;
       background: url(../img/icons/ico-profile.svg) 0 46% no-repeat;
   
@@ -112,7 +112,7 @@
     }
 
     &-list {
-      margin: 20px 0 0;
+      margin: 17px 0 0;
       padding: 27px 16px 26px;
       list-style: none;
       background: $white;

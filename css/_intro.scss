@@ -19,12 +19,14 @@
       padding: 4px 0 10px;
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
+      align-items: center;
     }
   }
 
   .link-forgot-password {
     display: inline-block;
+    vertical-align: top;
+    margin-top: -2px;
     padding-right: 31px;
     text-transform: uppercase;
     font: 500 16px/1.2 "Space Grotesk", sans-serif;
