@@ -39,8 +39,10 @@
   }
 
   &-visual {
+    margin-right: 40px;
     flex-grow: 1;
-    margin-top: 33px;
+    background: url(../img/image-intro.png) no-repeat 0 25%;
+    background-size: 100% auto;
 
     img {
       max-width: 426px;
