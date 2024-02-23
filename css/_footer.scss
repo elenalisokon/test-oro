@@ -3,15 +3,27 @@
   background: $black;
   color: $white;
 
+  @include phone {
+    padding: 59px 0 9px;
+  }
+
   .follow-list {
     margin: 0 0 41px;
     padding: 0;
     list-style: none;
     display: flex;
+
+    @include phone {
+      margin-bottom: 75px;
+    }
   }
 
   .follow-item {
     margin-right: 15px;
+
+    @include phone {
+      margin-right: 20px;
+    }
   }
 
   .follow-icon {
@@ -41,21 +53,46 @@
   &-bottom-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: $dark-gray;
+
+    @include phone {
+      display: block;
+      border-top: 1px solid $light-gray;
+      padding-top: 18px;
+    }
   }
 
   &-nav {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: $font-size-small;
+    line-height: $line-height-medium;
+
+    @include phone {
+      font-size: $font-size-smallest;
+      margin-bottom: 10px;
+    }
   }
 
   &-nav-item {
     display: inline-block;
     vertical-align: top;
     margin-right: 38px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include phone {
+      display: block;
+      margin-bottom: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &-nav-link {
@@ -69,49 +106,7 @@
 
   .copyright {
     min-width: 25.5%;
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .footer-nav-item {
-    margin-right: 20px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .footer {
-    padding: 59px 0 9px;
-    color: $dark-gray;
-
-    .follow-list {
-      margin-bottom: 75px;
-    }
-
-    .follow-item {
-      margin-right: 20px;
-    }
-
-    &-bottom-row {
-      display: block;
-      border-top: 1px solid $light-gray;
-      padding-top: 18px;
-    }
-    
-    &-nav {
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    &-nav-item {
-      display: block;
-      margin-bottom: 18px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
+    font-size: $font-size-smallest;
+    line-height: $line-height-small;
   }
 }

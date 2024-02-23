@@ -1,5 +1,6 @@
 input {
-  font: 500 20px/1.3 "Space Grotesk", sans-serif;
+  @include font(accent, $font-size-input, $line-height-small);
+
   display: block;
   background: none;
   color: $black;
@@ -12,27 +13,25 @@ input {
 }
 
 label {
-  font-size: 16px;
+  font-size: $font-size-medium;
   cursor: pointer;
 }
 
 .response {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: $font-size-smallest;
+  line-height: $line-height-smallest;
   min-height: 16px;
   color: $red;
   margin-bottom: 29px;
 
+  @include phone {
+    margin-bottom: 4px;
+  }
+
   &.success {
     color: $yellow;
-    font-size: 16px;
+    font-size: $font-size-medium;
     font-weight: bold;
     margin: 5px 0 0;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  input {
-    margin-bottom: 28px;
   }
 }

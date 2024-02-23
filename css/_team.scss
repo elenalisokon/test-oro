@@ -1,50 +1,87 @@
 .section-team {
-  padding: 100px 0 84px;
+  padding: 99px 0 84px;
+
+  @include phone {
+    padding: 47px 0 14px;
+  }
 
   .row {
-    max-width: 1680px;
-    padding-left: 11.95%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
+
+    @include large-desktop {
+      max-width: 1680px;
+      padding-left: 11.95%;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     &:before {
       position: absolute;
       content: "";
       top: 0;
-      left: -105px;
+      left: -301px;
       width: 258px;
       height: 258px;
       border: 1px solid $yellow;
       border-radius: 50%;
       z-index: -1;
+
+      @include large-desktop {
+        left: -105px;
+      }
     }
   }
 
   &-text {
-    width: 37%;
-    margin: 6.6% 0 0 40px;
+    margin: 0 0 86px;
+
+    @include desktop {
+      width: 37%;
+      margin: 6.6% 0 0 40px;
+    }
+
+    @include phone {
+      letter-spacing: 1px;
+    }
   }
 
   &-list {
     display: flex;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: $font-size-small;
+    line-height: $line-height-medium;
     margin: 0;
     padding: 0;
     list-style: none;
     color: $black;
+
+    @include phone {
+      display: block;
+    }
   }
 
   &-item {
     margin-right: 8px;
 
+    @include phone {
+      margin: 0 0 30px;
+    }
+
+    &:last-child {
+      @include phone {
+        margin-bottom: 0;
+      }
+    }
+
     img {
       display: block;
       max-width: 272px;
       width: 100%;
+      height: auto;
       margin-bottom: 9px;
     }
 
@@ -54,57 +91,14 @@
   }
 
   .link-bio {
-    font: 500 16px/1.2 "Space Grotesk", sans-serif;
+    @include font(accent, $font-size-medium, $line-height-smaller);
+
     text-decoration: underline;
     transition: all 0.3s ease;
 
     &:hover {
       color: $yellow;
       text-decoration: none;
-    }
-  }
-}
-
-@media screen and (max-width: 1479px) {
-  .section-team {
-    .row {
-      max-width: 1180px;
-      padding: 0 30px;
-
-      &:before {
-        left: -301px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .section-team {
-    .row {
-      display: block;
-    }
-
-    &-text {
-      width: 100%;
-      margin: 0 0 62px;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .section-team {
-    padding: 47px 0 14px;
-
-    &-list {
-      display: block;
-    }
-
-    &-item {
-      margin-bottom: 30px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 }

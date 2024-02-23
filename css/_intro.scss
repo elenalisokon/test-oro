@@ -1,35 +1,60 @@
 .section-intro {
   padding: 118px 0 91px;
 
+  @include phone {
+    padding: 40px 0 7px;
+  }
+
   .row {
-    display: flex;
     justify-content: space-between;
-    padding-left: 52px;
+
+    @include desktop {
+      display: flex;
+      padding-left: 52px;
+    }
   }
 
   &-welcome {
-    margin-right: 8.5%;
-    width: 50%;
+    @include desktop {
+      width: 50%;
+      margin-right: 8.5%;
+    }
   }
 
   .form-login {
     padding-top: 36px;
+
+    @include phone {
+      padding-top: 0;
+    }
 
     .button-row {
       padding: 4px 0 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include phone {
+        display: block;
+        padding-bottom: 0;
+      }
+
+      .btn {
+        @include phone {
+          margin-bottom: 34px;
+        }
+      }
     }
   }
 
   .link-forgot-password {
+    @include font(accent, $font-size-medium, $line-height-smaller);
+
     display: inline-block;
     vertical-align: top;
     margin-top: -2px;
     padding-right: 31px;
     text-transform: uppercase;
-    font: 500 16px/1.2 "Space Grotesk", sans-serif;
     background: url(../img/icons/arrow-forgot.svg) 100% 3px no-repeat;
 
     &:hover {
@@ -41,47 +66,13 @@
   &-visual {
     margin-right: 40px;
     flex-grow: 1;
-    background: url(../img/image-intro.png) no-repeat 0 25%;
+    background: url(../img/image-intro.png) no-repeat 0 24.5%;
     background-size: 100% auto;
 
     img {
       max-width: 426px;
       width: 100%;
       display: block;
-    }
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .section-intro {
-    .row {
-      display: block;
-    }
-    &-welcome {
-      width: auto;
-      margin: 0;
-    }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .section-intro {
-    padding: 40px 0 25px;
-    
-    .row {
-      padding-left: 30px;
-    }
-
-    .form-login {
-      padding-top: 0;
-
-      .button-row {
-        display: block;
-
-        .btn {
-          margin-bottom: 27px;
-        }
-      }
     }
   }
 }

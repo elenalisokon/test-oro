@@ -51,11 +51,20 @@ function toggleContainerState(container, activeClass) {
 function addToggleListeners(openerSelector, containerSelector, activeClass) {
     const opener = document.querySelector(openerSelector);
     const container = document.querySelector(containerSelector);
+    const menuLinks = container.querySelectorAll('.header-profile-toggle-link');
+    let currentIndex = 0; // Initialize the current index
 
     opener.addEventListener('click', (e) => {
-        e.preventDefault();
         e.stopPropagation();
         toggleContainerState(container, activeClass);
+    });
+
+    opener.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(); // Prevent the default action for 'Enter' and 'Space' key
+            e.stopPropagation();
+            toggleContainerState(container, activeClass);
+        }
     });
 
     document.addEventListener('click', (e) => {
@@ -65,6 +74,45 @@ function addToggleListeners(openerSelector, containerSelector, activeClass) {
             toggleContainerState(container, activeClass);
         }
     });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab' && container.classList.contains(activeClass)) {
+            container.classList.remove(activeClass);
+        }
+    });
+
+    // Add keyboard navigation inside the dropdown menu
+    container.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            currentIndex = getCurrentIndex(currentIndex, menuLinks, e.key === 'ArrowUp');
+
+            menuLinks[currentIndex].focus();
+        }
+    });
+
+    const hasFocusedElement = (items, element) => {
+        for(const item of items) {
+            if(element === item) {return true;}
+        } 
+        return false;
+    }
+
+    const getCurrentIndex = (currentIndex, menuLinks, isUpPressed) => {
+        const focusedElement = hasFocusedElement(menuLinks, document.activeElement);
+        if(!focusedElement) {
+            return currentIndex;
+        }
+
+        if (isUpPressed) {
+            currentIndex = (currentIndex - 1 + menuLinks.length) % menuLinks.length;
+        } else {
+            currentIndex = (currentIndex + 1) % menuLinks.length;
+        }
+        return currentIndex;
+    }
 }
 
 addToggleListeners('.js-mobile-menu-opener', '.js-mobile-menu-container', 'mobile-menu-active');

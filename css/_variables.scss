@@ -10,3 +10,53 @@ $silver: #C2CACF;
 $dark-gray: #9DA4A7;
 $darkest-gray: #535356;
 $black: #352E31;
+
+// Font sizes
+
+$font-size-smallest: 12px;
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size: 18px;
+$font-size-input: 20px;
+
+$font-size-h1: 60px;
+$font-size-h2: 45px;
+$font-size-h3: 16px;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 14px;
+$font-size-h1-mobile: 35px;
+
+// Line height
+
+$line-height-smallest: 16px;
+$line-height-smaller: 1.2;
+$line-height-small: 1.3;
+$line-height-medium: 1.4;
+$line-height-regular: 29px;
+$line-height-big: 1.5;
+$line-height-bigger: 1.6;
+
+$line-height-h1: 1.2;
+$line-height-h2: 1.1;
+$line-height-h3: 1.3;
+$line-height-h4: 1.4;
+
+// Fonts
+
+$fonts: (
+  main: (
+      font-family: ('Roboto', Arial, Helevtica, sans-serif),
+      font-weight: 400
+  ),
+
+  main_bold: (
+    font-family: ('Roboto', Arial, Helevtica, sans-serif),
+      font-weight: 700
+  ),
+
+  accent: (
+      font-family: ('Space Grotesk', Arial, Helevtica, sans-serif),
+      font-weight: 500
+  ),
+);

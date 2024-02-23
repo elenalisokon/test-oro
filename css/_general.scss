@@ -1,8 +1,27 @@
 body {
+  @include font(main, $font-size, $line-height-regular);
+
   background: $lightest-gray;
-  font: 18px/29px "Roboto", Arial, Helevtica, sans-serif;
   color: $darkest-gray;
   margin: 0;
+
+  .lg-hidden {
+    @include desktop {
+      display: none !important;
+    }
+  }
+
+  .md-hidden {
+    @include tablet {
+      display: none !important;
+    }
+  }
+
+  .sm-hidden {
+    @include phone {
+      display: none !important;
+    }
+  }
 }
 
 a {
@@ -19,22 +38,4 @@ p {
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
-}
-
-@media screen and (min-width: 1024px) {
-  .lg-hidden {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .md-hidden {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .sm-hidden {
-    display: none !important;
-  }
 }

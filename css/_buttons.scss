@@ -1,6 +1,6 @@
 button,
 input[type="submit"] {
-  font: 500 16px/1.2 "Space Grotesk", sans-serif;
+  @include font(accent, $font-size-medium, $line-height-smaller);
 }
 
 .btn {
@@ -14,14 +14,12 @@ input[type="submit"] {
   cursor: pointer;
   transition: all 0.7s ease;
 
-  &:hover {
-    color: $yellow;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .btn {
+  @include phone {
     width: 100%;
     padding: 14px 40px 15px;
+  }
+
+  &:hover {
+    color: $yellow;
   }
 }

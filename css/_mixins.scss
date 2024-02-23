@@ -1,0 +1,37 @@
+@mixin small-phone {
+  @media (max-width: 374px) { @content; }
+}
+@mixin phone {
+  @media (max-width: 767px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 1023px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+@mixin large-desktop {
+  @media (min-width: 1479px) { @content; }
+}
+
+/// Mixin for main custom font
+/// suppose we have regular, italic, bold and italic bold variant of custom font.
+/// mixin like this will help us to manage font styles through site
+/// @example
+///     @include font(main);
+///     @include font(main_bold);
+///     @include font(main, 14px);
+///     @include font($size:10px, $line-height: 10px);
+///     @include font(main, 10px, 15px);
+/// @param {String} $type [main] - type
+/// @param {String} $size [inherit] - size
+/// @param {Font Size} $line-height [inherit] - line-height
+
+@mixin font($type: main, $size: null, $line-height: null) {
+  @if $type != null {
+      font-family: map-get(map-get($fonts, $type), font-family);
+      font-weight: map-get(map-get($fonts, $type), font-weight);
+  }
+  font-size: $size;
+  line-height: $line-height;
+}

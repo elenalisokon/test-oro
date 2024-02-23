@@ -1,14 +1,31 @@
 .section-partner {
   background: $yellow;
-  font-size: 16px;
+  font-size: $font-size-medium;
+  line-height: $line-height-big;
+
+  @include tablet {
+    padding: 139px 0;
+  }
+
+  @include phone {
+    padding: 34px 0 57px;
+  }
 
   .row {
-    display: flex;
-    align-items: center;
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
   }
 
   p {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    @include phone {
+      margin-top: 15px;
+    }
   }
 
   &-visual {
@@ -18,26 +35,6 @@
     img {
       width: 100%;
       display: block;
-    }
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .section-partner {
-    padding: 139px 0;
-
-    .row {
-      display: block;
-    }
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .section-partner {
-    padding: 34px 0 57px;
-
-    .btn {
-      margin-top: 15px;
     }
   }
 }
