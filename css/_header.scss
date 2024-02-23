@@ -1,12 +1,15 @@
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
   background: $white;
   box-shadow: 0 4px 10px rgba(0,0,0, 0.05);
   border: 1px solid $light-gray;
   border-width: 1px 0;
   color: $black;
+
+  @include tablet {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
 
   a {
     color: $black;

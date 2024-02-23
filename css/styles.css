@@ -184,15 +184,19 @@ input[type=submit] {
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 2;
   background: #FFF;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid #EAECEE;
   border-width: 1px 0;
   color: #352E31;
+}
+@media (max-width: 1023px) {
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
 }
 .header a {
   color: #352E31;
